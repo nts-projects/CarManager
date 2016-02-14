@@ -1,0 +1,39 @@
+<!-- New Reading: Add new form -->
+
+<div class="edit_reading">
+  <div class="container">
+	<h2>Create Car Reading</h2>
+	<%= form_for [@car, @new_reading], :html => {:class => "form-horizontal center"} do |f| %>
+
+	<div class="form-group">
+		<%= f.label :date, 'Date', class: "col-md-2 control-label" %>
+		<div class="col-md-2">
+			<%= f.text_field :date, class: "form-control" %>
+ 		</div>
+    </div>
+	<div class="form-group">
+		<%= f.label :odo, 'Odo Reading', class: "col-md-2 control-label" %>
+		<div class="col-md-2">
+			<%= f.text_field :odo, class: "form-control" %>
+		</div>
+    </div>
+	<div class="form-group">
+		<%= f.label :fuel_vol, 'Fuel Volume', class: "col-md-2 control-label" %>
+		<div class="col-md-2">
+			<%= f.text_field :fuel_vol, class: "form-control" %>
+		</div>
+    </div>
+	<div class="form-group">
+		<%= f.label :fuel_cost, 'Fuel Cost', class: "col-md-2 control-label" %>
+		<div class="col-md-2">
+			<%= f.text_field :fuel_cost, class: "form-control" %>
+		</div>
+    </div>
+    <div class="action-btn">
+    	<div class="form-group">
+			<%= f.submit "Create", class: "btn btn-default btn-success"%>
+		</div>
+	</div>
+	<% end %>
+  </div>
+</div>

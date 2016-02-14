@@ -1,0 +1,36 @@
+
+<% @cars.each do |c| %><div class="cars_index">
+  <div class="container">
+  
+    
+      <!--
+      To do: Loop through tags and display each one with this HTML
+      <div class="card col-xs-4">
+        tag's image goes here
+        <h2> tag's title goes here </h2>
+      </div>
+      -->
+
+    <div class ="car_image">
+      <%= image_tag c.image %>
+    </div>
+       <h1><%= c.make %> <%= c.model %> <small><%= c.model_year %></small></h1>
+      <p><%= c.rego %></p>
+      <%= link_to "Details", car_path(c), class: 'btn btn-primary btn-xs' %>
+      <%= link_to "Delete", car_path(c),:method =>:delete, data: {confirm: "Are you sure you want to delete this car?"}, class: 'btn btn-danger btn-xs'%>
+  </div>
+</div>
+<% end %>
+
+<%= link_to "Add new car", new_car_path, class: 'btn btn-info btn-xs' %>
+
+<!--
+    t.string   "make"
+    t.string   "model"
+    t.string   "model_year"
+    t.string   "variant"
+    t.string   "rego"
+    t.string   "colour"
+    t.string   "vin"
+    t.date     "date_acquired"
+    t.string   "image"

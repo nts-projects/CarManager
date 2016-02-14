@@ -1,0 +1,65 @@
+// Place all the styles related to the Cars controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.cars {
+	background-color: #F2F2F2;
+	margin: auto;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 25px;
+
+}
+
+.cars_index {
+	background-color: #F2F2F2;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 25px;
+
+}
+
+
+
+.car_image {
+	
+	width: 400px;
+	margin-right: 20px;
+	border: 10px solid white;
+	box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.3);
+	float: left;
+
+}
+
+.car_image img {
+	
+	width: 100%;
+	height: auto;
+
+}
+
+.cars h1 {
+	
+	padding-bottom: 5px;
+	border-bottom: 1px solid #C8C8C8;
+
+}
+.car_info {
+	
+	/* border: 1px solid red; */
+	/* background-color: pink; */
+	float: left;
+	width: 600px;
+	position: relative;
+	top: -20px;
+
+}
+.car_info  p{
+	
+	font-size: 13px;
+	margin: 4px;
+
+}

@@ -1,0 +1,63 @@
+<div class="cars">
+  <div class="container">
+  
+    
+      <!--
+      To do: Loop through tags and display each one with this HTML
+      <div class="card col-xs-4">
+        tag's image goes here
+        <h2> tag's title goes here </h2>
+      </div>
+      -->
+      <div class ="car_image">
+        <%= image_tag @car.image %>
+      </div>
+      <div class="car_info">
+        <h1><%= @car.make %> <%= @car.model %> <small><%= @car.model_year %></small></h1>
+        <p>Registration: <%= @car.rego %></p>
+        <p>VIN: <%= @car.vin %></p>
+        <p>Date Acquired: <%= @car.date_acquired %></p>
+        <p>Car id: <%= @car.id %></p>
+        <p>Max ODO: <%= @max_odo %></p>
+        <p>Min ODO: <%= @min_odo %></p>
+        <p>Distance travelled: <%= @car_dist %>km</p>
+        <p>Total fuel used: <%= @fuel_used.round(2) %> litres</p>
+        <p>Total fuel cost: $<%= @fuel_cost.round(2) %></p>
+        <%= link_to "Edit details", edit_car_path(@car.id), class: 'btn btn-default btn-xs' %>
+      <!-- Edit link for car details here -->
+    </div>
+
+  </div>
+</div>
+
+<div class="readings">
+  <div class="container">
+      <!-- Loop through readings for car. Add an edit button for each reading -->
+    <h3>Car Readings <small><%= @car.rego %></small></h3>
+    <!-- Add new car reading button -->
+    <%= link_to "Add car reading", new_car_reading_path(@car.id), class: 'btn btn-default btn-xs' %>
+    <table class="table table-condensed">
+      <thead>
+      <tr>
+        <th>Date</th>
+        <th>Odo Reading</th>
+        <th>Fuel Amount</th>
+        <th>Fuel Cost</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @readings.each do |r| %>
+      <tr>
+        <td><%= r.date %></td>
+        <td><%= r.odo %></td>
+        <td><%= r.fuel_vol %></td>
+        <td><%= r.fuel_cost %></td>
+        <!-- Edit link for readings here -->
+        <td><%= link_to "Edit", edit_car_reading_path(@car.id, r.id), class: 'btn btn-info btn-xs'%></td>
+        <td><%= link_to "Delete", car_reading_path(@car, r),:method =>:delete, data: {confirm: "Are you sure you want to delete this reading?"}, class: 'btn btn-danger btn-xs'%></td>
+      </tr>
+      </tbody>
+      <% end %>
+    </table>
+  </div>
+</div>

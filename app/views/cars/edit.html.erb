@@ -1,0 +1,72 @@
+<!-- Car Edit Details -->
+
+<div class="edit_car_details">
+  <div class="container">
+	<h2>Edit Car Details</h2>
+	<%= form_for @car, :html => {:class => "form-horizontal center"} do |f| %>
+
+	<div class="form-group">
+		<%= f.label :make, 'Make', class: "col-md-2 control-label" %>
+		<div class="col-md-4">
+			<%= f.text_field :make, class: "form-control" %>
+ 		</div>
+    </div>
+	<div class="form-group">
+		<%= f.label :model, 'Model', class: "col-md-2 control-label" %>
+		<div class="col-md-4">
+			<%= f.text_field :model, class: "form-control" %>
+		</div>
+    </div>
+
+	<div class="form-group">
+		<%= f.label :model_year, 'Model Year', class: "col-md-2 control-label" %>
+		<div class="col-md-4">
+			<%= f.text_field :model_year, class: "form-control" %>
+		</div>
+    </div>
+	<div class="form-group">
+		<%= f.label :variant, 'Variant', class: "col-md-2 control-label" %>
+		<div class="col-md-4">
+			<%= f.text_field :variant, class: "form-control" %>
+		</div>
+    </div>
+    <div class="form-group">
+		<%= f.label :colour, 'Colour', class: "col-md-2 control-label" %>
+		<div class="col-md-4">
+			<%= f.text_field :colour, class: "form-control" %>
+		</div>
+    </div>
+	<div class="form-group">
+		<%= f.label :rego, 'Registration', class: "col-md-2 control-label" %>
+		<div class="col-md-4">
+			<%= f.text_field :rego, class: "form-control" %>
+		</div>
+    </div>
+	<div class="form-group">
+		<%= f.label :vin, 'Vin No.', class: "col-md-2 control-label" %>
+		<div class="col-md-4">
+			<%= f.text_field :vin, class: "form-control" %>
+		</div>
+    </div>
+    <div class="form-group">
+		<%= f.label :date_acquired, 'Date Acquired', class: "col-md-2 control-label" %>
+		<div class="col-md-4">
+			<%= f.text_field :date_acquired, class: "form-control" %>
+		</div>
+    </div>
+    <div class="form-group">
+		<%= f.label :image, 'Image URL', class: "col-md-2 control-label" %>
+		<div class="col-md-4">
+			<%= f.text_field :image, class: "form-control" %>
+		</div>
+    </div>
+
+    <div class="action-btn">
+    	<div class="form-group">
+		<%= f.submit "Update", class: 'btn btn-primary btn-xs' %>
+		</div>
+	</div>
+
+	<% end %>
+  </div>
+</div>
