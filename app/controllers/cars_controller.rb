@@ -23,6 +23,7 @@ class CarsController < ApplicationController
 
 		else
 			#readings is not nil
+			#do calculations for display. Should they be done from the Car model? ie) car.run_calcs(car_id)
 
 			@max_odo = @readings.maximum("odo")
 			@min_odo = @readings.minimum("odo")
