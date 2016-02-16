@@ -2,6 +2,10 @@ class Car < ActiveRecord::Base
 
 	has_many :readings, dependent: :destroy
 
+	#car model must have the following attributes:
+	validates :make, :model, :rego, presence: true
+
+
 	# 
 	# min odo
 	# max odo
